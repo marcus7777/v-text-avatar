@@ -8,7 +8,12 @@
 -->
 <dom-module id="text-avatar">
   <template>
-    <style>:host {display:inline-block}</style>
+    <style>
+      :host {
+        display:inline-block;
+        @apply(--paper-font-common-base);
+      }
+    </style>
     <div style="width:[[size]]px;border-radius: 50%;background-color: [[bg]];text-align: center;height:[[size]]px;line-height:[[size]]px;color:[[fg]]">[[name.0]]</div>
   </template>
 </dom-module>
