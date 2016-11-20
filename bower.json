@@ -1,0 +1,14 @@
+{
+  "name": "text-avatar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "text-avatar.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "please-js": "*",
+    "polymer": "*"
+  }
+}

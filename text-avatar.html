@@ -1,0 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../please-js/please-js.html">
+<!--
+  `<text-avatar></text-avatar>` Text Avater like in inbox
+  @demo demo.html
+-->
+<dom-module id="text-avatar">
+  <template>
+    <style>:host {display:inline-block;}</style>
+    <div style="width:[[size]]px;border-radius: 50%;background-color: [[bg]];text-align: center;height:[[size]]px;line-height:[[size]]px;color:[[fg]]">[[name.0]]</div>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "text-avatar",
+    properties:{
+      bg:{
+        type:String,
+        computed:"getBg(name,email)",
+      },
+      fg:{
+        type:String,
+        computed:"getFg(bg)",
+      },
+      size:{
+        value:36,
+        type:Number,
+      },
+    },
+    getBg: function(name,email){
+      return Please.make_color({from_hash: name+email})
+    },
+    getFg: function(bg){
+      if (bg > "#555555") {
+        return "#000"
+      } else {
+        return "#FFF"
+      }
+    },
+  })
+</script>
