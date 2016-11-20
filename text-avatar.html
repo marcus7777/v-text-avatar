@@ -1,12 +1,23 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../please-js/please-js.html">
+<link rel="import" href="../paper-item/paper-item-shared-styles.html">
+
 <!--
   `<text-avatar></text-avatar>` Text Avater like in inbox
   @demo demo.html
 -->
 <dom-module id="text-avatar">
   <template>
-    <style>:host {display:inline-block;}</style>
+    <style include="paper-item-shared-styles"></style>
+    <style>
+      :host {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--paper-font-subhead);
+        @apply(--paper-item);
+        display:inline-block;
+      }
+    </style>
     <div style="width:[[size]]px;border-radius: 50%;background-color: [[bg]];text-align: center;height:[[size]]px;line-height:[[size]]px;color:[[fg]]">[[name.0]]</div>
   </template>
 </dom-module>
