@@ -1,6 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../please-js/please-js.html">
-<link rel="import" href="../paper-styles/typography.html">
 
 <!--
   `<text-avatar></text-avatar>` Text Avater like in inbox
@@ -11,7 +10,8 @@
     <style>
       :host {
         display:inline-block;
-        @apply(--paper-font-common-base);
+        font-family: 'Roboto', 'Noto', sans-serif;
+        -webkit-font-smoothing: antialiased;
       }
     </style>
     <div style="width:[[size]]px;border-radius: 50%;background-color: [[bg]];text-align: center;height:[[size]]px;line-height:[[size]]px;color:[[fg]]">[[name.0]]</div>
