@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../please-js/please-js.html">
-<link rel="import" href="../paper-item/paper-item-shared-styles.html">
+<link rel="import" href="../paper-styles/typography.html">
 
 <!--
   `<text-avatar></text-avatar>` Text Avater like in inbox
@@ -8,12 +8,7 @@
 -->
 <dom-module id="text-avatar">
   <template>
-    <style include="paper-item-shared-styles"></style>
-    <style>
-      :host {
-        display:inline-block;
-      }
-    </style>
+    <style>:host {display:inline-block}</style>
     <div style="width:[[size]]px;border-radius: 50%;background-color: [[bg]];text-align: center;height:[[size]]px;line-height:[[size]]px;color:[[fg]]">[[name.0]]</div>
   </template>
 </dom-module>
