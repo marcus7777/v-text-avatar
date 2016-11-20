@@ -8,7 +8,6 @@
     "web-components"
   ],
   "dependencies": {
-    "paper-styles": "PolymerElements/paper-styles",
     "please-js": "marcus7777/please-js",
     "polymer": "*"
   }
