@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "text-avatar.html",
+  "license": "Apache License 2.0",
   "keywords": [
     "polymer",
     "web-components"
