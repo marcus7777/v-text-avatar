@@ -1,8 +1,8 @@
 <template>
-  <span :style="`width:${size}px;border-radius: 50%;background-color: ${bg};text-align: center;height:${size}px;line-height:${size}px;color:${fg}`">{{init}}</span>
+  <span :style="`display:inline-block;width:${size}px;border-radius:50%;background-color:${bg};text-align:center;height:${size}px;line-height:${size}px;color:${fg}`">{{init}}</span>
 </template>
 <script>
-import Please from "PleaseJS"
+import "PleaseJS"
 export default {
   name: "textAvatar",
   computed:{
