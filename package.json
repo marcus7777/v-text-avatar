@@ -8,6 +8,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "please-js": "marcus7777/please-js"
+    "PleaseJS": "ibarrajo/PleaseJS"
   }
 }
