@@ -1,5 +1,5 @@
 <template>
-  <span :style="width:${size}px;border-radius: 50%;background-color: ${bg};text-align: center;height:${size}px;line-height:${size}px;color:${fg}`">{{name.0}}</span>
+  <span :style="`width:${size}px;border-radius: 50%;background-color: ${bg};text-align: center;height:${size}px;line-height:${size}px;color:${fg}`">{{name.0}}</span>
 </template>
 <script>
 import Please from "please-js"
