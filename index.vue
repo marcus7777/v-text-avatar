@@ -6,6 +6,10 @@ import Please from "PleaseJS"
 export default {
   name: "textAvatar",
   computed:{
+    init() {
+      let initials = this.name.match(/\b\w/g) || [];
+      return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
+    },
     bg() {
       return Please.make_color({from_hash: this.name+this.email})
     },
