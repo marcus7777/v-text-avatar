@@ -1,11 +1,19 @@
 <template>
-  <span :style="`display:inline-block;width:${size}px;border-radius:50%;background-color:${bg};text-align:center;height:${size}px;line-height:${size}px;color:${fg}`">{{init}}</span>
+  <span :style="`display:inline-block;width:${cssSize};border-radius:50%;background-color:${bg};text-align:center;height:${cssSize};line-height:${cssSize};color:${fg}`">{{init}}</span>
 </template>
 <script>
 import "PleaseJS"
 export default {
   name: "textAvatar",
   computed:{
+    cssSize(){
+      let size
+      if (typeof this.size === "number") {
+        return size + "px"
+      } else {
+        return size
+      }
+    },
     init() {
       let initials = this.name.match(/\b\w/g) || [];
       return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
@@ -34,7 +42,6 @@ export default {
   props:{
     size:{
       default: 36,
-      type: Number,
     },
     email:{
       default:"",
