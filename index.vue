@@ -7,12 +7,7 @@ export default {
   name: "textAvatar",
   computed:{
     cssSize(){
-      let size
-      if (typeof this.size === "number") {
-        return this.size + "px"
-      } else {
-        return this.size
-      }
+      return this.size + "px"
     },
     init() {
       let initials = this.name.match(/\b\w/g) || [];
