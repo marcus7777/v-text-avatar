@@ -41,7 +41,7 @@ export default {
   },
   props:{
     size:{
-      default: 36,
+      default: 48,
     },
     email:{
       default:"",
