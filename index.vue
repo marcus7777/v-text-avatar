@@ -9,9 +9,9 @@ export default {
     cssSize(){
       let size
       if (typeof this.size === "number") {
-        return size + "px"
+        return this.size + "px"
       } else {
-        return size
+        return this.size
       }
     },
     init() {
