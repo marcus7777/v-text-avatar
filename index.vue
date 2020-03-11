@@ -3,6 +3,14 @@
 </template>
 <script>
 import "PleaseJS"
+function name (name) {
+  const match = /(mr|ms|miss|mrs|mx|dr|sir|prof|lady|lord)(\.?)\s/i.exec(name)
+  let n = name
+  if (match !== null) { 
+    n = name.replace(match[0], "")
+  }
+  return n
+}
 export default {
   name: "textAvatar",
   computed:{
@@ -10,7 +18,7 @@ export default {
       return this.size + "px"
     },
     init() {
-      let initials = this.name.match(/\b\w/g) || [];
+      let initials = name(this.name).match(/\b\w/g) || [];
       return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
     },
     bg() {
