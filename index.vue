@@ -19,6 +19,9 @@ export default {
     },
     init() {
       let initials = name(this.name).match(/\b\w/g) || [];
+      if (this.title) {
+        initials = this.name.match(/\b\w/g) || [];
+      }
       return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
     },
     bg() {
@@ -48,13 +51,14 @@ export default {
       type: Number,
     },
     email:{
-      default:"",
+      default: "",
       type: String,
     },
     name:{
-      default:"Marcus",
+      default: "A B",
       type: String,
-    }
+    },
+    title: Boolean,
   },
 }
 </script>
