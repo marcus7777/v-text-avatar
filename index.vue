@@ -48,7 +48,9 @@ export default {
   props:{
     size:{
       default: 48,
-      type: Number,
+      validator: function (value) {
+        return +value !== 0
+      },
     },
     email:{
       default: "",
