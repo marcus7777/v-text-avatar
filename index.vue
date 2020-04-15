@@ -25,7 +25,7 @@ export default {
       return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
     },
     bg() {
-      return Please.make_color({from_hash: this.name+this.email})
+      return this.color || Please.make_color({from_hash: this.name+this.email})
     },
     fg(){
       let bg = this.bg
@@ -46,6 +46,10 @@ export default {
     }
   },
   props:{
+    color: {
+      type:String,
+      default: "",
+    },
     size:{
       default: 48,
       validator: function (value) {
