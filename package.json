@@ -1,6 +1,6 @@
 {
   "name": "text-avatar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Text Avater like in google's 'inbox'",
   "main": "index.vue",
   "repository": "git@github.com:marcus7777/text-avatar.git",
