@@ -4,8 +4,19 @@
 <script>
 import "PleaseJS"
 function name (name, email) {
-  if (!name) {
+  if (!name && email) {
     name = email.substring(0, email.lastIndexOf("@"))
+    if (name.length == 2) {
+      name = name[0] + " " + name[1]
+    } else {
+      name = name.replace("."," ").
+        // insert a space between lower & upper
+    	  .replace(/([a-z])([A-Z])/g, '$1 $2')
+		    // space before last upper in a sequence followed by lower
+		    .replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3')
+		    // uppercase the first character
+		    .replace(/^./, function(str){ return str.toUpperCase()
+    }
   }
   const match = /(mr|ms|miss|mrs|mx|dr|sir|prof|lady|lord)(\.?)\s/i.exec(name)
   let n = name
@@ -64,7 +75,6 @@ export default {
       type: String,
     },
     name:{
-      default: "A B",
       type: String,
     },
     title: Boolean,
