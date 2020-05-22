@@ -11,11 +11,11 @@ function name (name, email) {
     } else {
       name = name.replace("."," ")
         // insert a space between lower & upper
-    	  .replace(/([a-z])([A-Z])/g, '$1 $2')
-		    // space before last upper in a sequence followed by lower
-		    .replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3')
-		    // uppercase the first character
-		    .replace(/^./, function(str){ return str.toUpperCase()
+    	.replace(/([a-z])([A-Z])/g, '$1 $2')
+	// space before last upper in a sequence followed by lower
+	.replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3')
+	// uppercase the first character
+	.replace(/^./, function(str){ return str.toUpperCase()})
     }
   }
   const match = /(mr|ms|miss|mrs|mx|dr|sir|prof|lady|lord)(\.?)\s/i.exec(name)
