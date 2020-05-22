@@ -9,7 +9,7 @@ function name (name, email) {
     if (name.length == 2) {
       name = name[0] + " " + name[1]
     } else {
-      name = name.replace("."," ").
+      name = name.replace("."," ")
         // insert a space between lower & upper
     	  .replace(/([a-z])([A-Z])/g, '$1 $2')
 		    // space before last upper in a sequence followed by lower
