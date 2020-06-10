@@ -31,7 +31,7 @@ export default {
     cssSize(){
       return this.size + "px"
     },
-    init() {:
+    init() {
       let initials = name(this.name, this.email).match(/\b\w/g) || [];
       if (this.title) {
         initials = this.name.match(/\b\w/g) || [];
