@@ -3,7 +3,7 @@
 </template>
 <script>
 import "PleaseJS"
-function name (name, email) {
+function name (name = "", email) {
   if (!name && email) {
     name = email.substring(0, email.lastIndexOf("@")) + ""
     if (name.length == 2) {
@@ -19,7 +19,7 @@ function name (name, email) {
     }
   }
   const match = /(mr|ms|miss|mrs|mx|dr|sir|prof|lady|lord)(\.?)\s/i.exec(name)
-  let n = name+""
+  let n = name || ""
   if (match !== null) {
     n = name.replace(match[0], "")
   }
@@ -32,6 +32,7 @@ export default {
       return this.size + "px"
     },
     init() {
+      if (!this.name) return ""
       let initials = name(this.name, this.email).match(/\b\w/g) || [];
       if (this.title) {
         initials = this.name.match(/\b\w/g) || [];
