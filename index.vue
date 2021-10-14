@@ -44,8 +44,8 @@ export default {
     },
     fg(){
       console.log(this.bg)
-      if (typeof this.bg !== "string") return "#000"
-      let bg = this.bg
+      let bg = this.bg.hex || this.bg
+      if (typeof bg !== "string") return "#000"
 
       let c = bg.substring(1);     // strip #
       let rgb = parseInt(c, 16);   // convert rrggbb to decimal
