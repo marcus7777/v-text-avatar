@@ -43,6 +43,7 @@ export default {
       return this.color || Please.make_color({from_hash: this.name+this.email})
     },
     fg(){
+      console.log(this.bg)
       if (typeof this.bg !== "string") return "#000"
       let bg = this.bg
 
